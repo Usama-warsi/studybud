@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>My name is Maria | Your digital ai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="{% static 'css/plugins.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+<style>
+	/* body {
+	  background: #eee
+  } */
+  
+  /* #regForm {
+	  background-color: #ffffff;
+	  margin: 0px auto;
+	  font-family: Raleway;
+	  padding: 40px;
+	  border-radius: 10px
+  } */
+  
+  #register{
+  
+	color: var( --techwave-main-color);
+  }
+  
+  h1 {
+	  text-align: center
+  }
+  
+  input {
+	  padding: 10px;
+	  width: 100%;
+	  font-size: 17px;
+	  font-family: Raleway;
+	  border: 1px solid #aaaaaa;
+	  border-radius: 10px;
+	  -webkit-appearance: none;
+  }
+  
+  
+  
+  .tab input:focus{
+	border: 2px solid var(--techwave-border-color);
+    background-color: transparent;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    width: 100%;
+    padding: 18px 72px 16px 20px;
+    font-size: 16px;
+    line-height: 22px;
+    max-height: 170px;
+    resize: none;
+    overflow-y: hidden;
+    color: var(--techwave-heading-color);
+  }
+  
+  input.invalid {
+   
+	  border:1px solid #e03a0666;
+  }
+  
+  .tab {
+	  display: none
+  }
+  
+  button {
+	  background-color: var( --techwave-main-color);
+	  color: #ffffff;
+	  border: none;
+	  border-radius: 50%;
+	  padding: 15px 20px;
+	  font-size: 17px;
+	  font-family: Raleway;
+	  cursor: pointer
+  }
+  
+  button:hover {
+	  opacity: 0.8
+  }
+  
+  button:focus{
+  
+	outline: none !important;
+  }
+  
+  #prevBtn {
+	  background-color: #bbbbbb
+  }
+  
+  
+  .all-steps{
+		text-align: center;
+	  margin-top: 30px;
+	  margin-bottom: 30px;
+	  width: 100%;
+	  display: inline-flex;
+	  justify-content: end;
+  }
+  
+  .step {
+		 height: 40px;
+	  width: 40px;
+	  margin: 0 2px;
+	  background-color: #bbbbbb;
+	  border: none;
+	  border-radius: 50%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  font-size: 15px;
+	  color: var( --techwave-main-color);
+	  opacity: 0.5;
+  }
+  
+  .step.active {
+	  opacity: 1
+  }
+  
+  
+  .step.finish {
+	 color: #fff;
+	 background: var( --techwave-main-color);
+	 opacity: 1;
+  
+  }
+  
+  
+  
+  .all-steps {
+	  text-align: center;
+	  margin-top: 30px;
+	  margin-bottom: 30px
+  }
+  
+  .thanks-message {
+	  display: none;
+	  background-color: var(--techwave-some-a-bg-color);
+    color: var(--techwave-heading-color);
+	text-align: center;
+	border-radius: 5px;
+	padding: 2rem;
+  }
+  </style>
+<style>
+.img-logo{
+	position: absolute;
+	height: 350px;
+	left: 185px;
+	top: 20%;
+}
+.text p{
+	width: 450px;
+    text-align: left;
+}
+.inputfileds{
+	border: 2px solid var(--techwave-border-color);
+    background-color: transparent;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    width: 100%;
+    padding: 18px 72px 16px 20px;
+    font-size: 16px;
+    line-height: 22px;
+    max-height: 170px;
+    resize: none;
+    overflow-y: hidden;
+    color: var(--techwave-heading-color);
+}
+#nextprevious{
+	margin: 1rem 0;
+}
+@media (max-width:1024px){
+
+
+.img-logo{
+position: absolute;
+height: 350px;
+left: 10px;
+top:200px;
+}
+}
+@media (max-width:768px){
+
+	.text p{
+	width: 100%;
+    text-align: center;
+}
+.all-steps{
+	display: none;
+}
+.img-logo{
+	position: absolute;
+	height: 140px;
+	left: 0%;
+	top: 34.5%;
+}
+}
+
+</style>
+</head>
+
+<body>
+ 
+   
+
+    {% block content %}
+        
+        
+        
+    {% endblock  %}
+  
+
+
+
+
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/init.js' %}"></script>
+<script>
+	var currentTab = 0;
+				document.addEventListener("DOMContentLoaded", function(event) {
+  
+  
+				showTab(currentTab);
+  
+				});
+  
+				function showTab(n) {
+				var x = document.getElementsByClassName("tab");
+				x[n].style.display = "block";
+				if (n == 0) {
+				document.getElementById("prevBtn").style.display = "none";
+				} else {
+				document.getElementById("prevBtn").style.display = "inline";
+				}
+				if (n == (x.length - 1)) {
+				document.getElementById("nextBtn").innerHTML = '<i class="fa fa-angle-double-right"></i>';
+				} else {
+				document.getElementById("nextBtn").innerHTML = '<i class="fa fa-angle-double-right"></i>';
+				}
+				fixStepIndicator(n)
+				}
+  
+				function nextPrev(n) {
+				var x = document.getElementsByClassName("tab");
+				if (n == 1 && !validateForm()) return false;
+				x[currentTab].style.display = "none";
+				currentTab = currentTab + n;
+				if (currentTab >= x.length) {
+			  
+				
+					document.getElementById("text-message").style.display = "block";
+				document.getElementById("nextprevious").style.display = "none";
+				document.getElementById("all-steps").style.display = "none";
+				document.getElementById("register").style.display = "none";
+  
+  
+  
+  
+				}
+				showTab(currentTab);
+				}
+  
+				function validateForm() {
+					 var x, y, i, valid = true;
+					 x = document.getElementsByClassName("tab");
+					 y = x[currentTab].getElementsByTagName("input");
+					 for (i = 0; i < y.length; i++) {
+						 if (y[i].value == "") {
+							 y[i].className += " invalid";
+							 valid = false;
+						 }
+  
+  
+					 }
+					 if (valid) {
+						 document.getElementsByClassName("step")[currentTab].className += " finish";
+					 }
+					 return valid;
+				 }
+  
+				 function fixStepIndicator(n) {
+					 var i, x = document.getElementsByClassName("step");
+					 for (i = 0; i < x.length; i++) {
+						 x[i].className = x[i].className.replace(" active", "");
+					 }
+					 x[n].className += " active";
+				 }
+  </script>
+
+</body>
+</html>
+
+
+
